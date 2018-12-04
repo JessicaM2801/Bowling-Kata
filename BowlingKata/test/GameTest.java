@@ -16,7 +16,7 @@ class GameTest {
 	void testAllStrike() {
 		Game myGame = new Game();
 		for(int i=0; i<9; i++)
-			myGame.addFrame(10,0);
+			myGame.addFrame(10);
 		myGame.addFrame(10,10,10);
 		assertEquals("Alle Würfe Strike, Punkte: 300", 300, myGame.calculateScores());
 	}
@@ -41,7 +41,7 @@ class GameTest {
 	@Test
 	void test1StrikeRest2PinsDown() {
 		Game myGame = new Game();
-		myGame.addFrame(10,0);
+		myGame.addFrame(10);
 		for(int i=0; i<9; i++)
 			myGame.addFrame(2,2);
 		assertEquals("1 Strike, alle anderen Würfe 2, Punkte: 50", 50, myGame.calculateScores());
